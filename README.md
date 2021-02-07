@@ -15,7 +15,7 @@ Due to the fact that dynamic analysis is much more time-consuming than the stati
 Samples are fetched from [abuse](abuse.ch). To compare analysis results the public instance of [cape sandbox](https://capesandbox.com/) or for instance [any.run](https://app.any.run/submissions/) could be used.
 
 # Machines
-Each machine is running ssh client on port 903.
+Each machine is running ssh client on port _Will be shared after providing the public key_.
 
 **Network:** _Will be shared after providing the public key_
 
