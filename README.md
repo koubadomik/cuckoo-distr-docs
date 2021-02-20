@@ -134,8 +134,10 @@ _Used http://asciiflow.com/_
 
 
 ### Modified capemon
-This change is in ``/opt/CAPEv2/analyzer/windows/dll/``, where is just different version of `capemon_x64.dll` and `capemon.dll` which is modified by KCL guys.
-
+This change is in ``/opt/CAPEv2/analyzer/windows/dll/``, where is just different version of `capemon_x64.dll` and `capemon.dll` which is modified by KCL guys. There exist three variants of modified capemon.
+- files
+- registry
+- mutexes
 
 ## Data collection
 Main steps:
