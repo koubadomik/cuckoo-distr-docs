@@ -164,3 +164,23 @@ For extraction could be used something like:
 for f in $source_dir/*/*/*.zip; do  unzip -p "$f" opt/CAPEv2/storage/analyses/*/reports/report.json >  "$extract_dir/"$(basename $f .zip)".json";done
 ```
 The analysis directory can have kB but even hundreds of MB, for example compression of json files helps a lot if you want to transfer only report.json.
+
+
+## Administration
+TODO: update sections above
+- router machine 
+  - what commands have to run (not run automatically, if router is dropped it has to be restarted)
+  			§ sudo openvpn --config /etc/openvpn/vpn0.ovpn - L3 VPN to dirty lab
+			§ sudo openvpn --config /etc/openvpn/l2/server1.conf - L2 VPN server
+   sudo iptables -t nat -A POSTROUTING -o tun1 -j MASQUERADE
+Ip address on tap0 has to be assigned 172.20.1.1/24 - ip a add 172.20.1.1/24 dev tap0; ip link set up dev tap0
+Testing
+curl https://jsonip.com we should see {"ip":"147.32.82.210","geo-ip":"https://getjsonip.com/#plus","API Help":"https://getjsonip.com/#docs"}
+  - reference image - updated image of router is the last image of Ubuntu-router in VBox of master machine, it is also on NAS in configs directory
+- worker machines
+  - 
+- scripts (all should be located on NAS)
+  - cronjobs (describe pipeline)
+  - scripts
+      - one script for orchestration containing - all machines clean and restart, one machine clean and restart, db clean running, clean running on specific ip address (such job should be included in restarting all machines or particular machine, update configs of machines (maybe)
+      -  ansible-playbook play-books/empty.yml -l test --ask-become-pass
