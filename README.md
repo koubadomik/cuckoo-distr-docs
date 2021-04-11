@@ -183,4 +183,5 @@ curl https://jsonip.com we should see {"ip":"147.32.82.210","geo-ip":"https://ge
   - cronjobs (describe pipeline)
   - scripts
       - one script for orchestration containing - all machines clean and restart, one machine clean and restart, db clean running, clean running on specific ip address (such job should be included in restarting all machines or particular machine, update configs of machines (maybe)
-      -  ansible-playbook play-books/empty.yml -l test --ask-become-pass
+      -  ansible-playbook play-books/empty.yml -l slaves --ask-become-pass (then we have to wait)
+      -  curl -F file=@/home/capecomp1/Downloads/pafish.exe http://147.32.83.170:8000/api/tasks/create/file/
